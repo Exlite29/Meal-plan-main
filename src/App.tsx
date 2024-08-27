@@ -1,39 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import Home from './page/Home';
+import Drag from './page/Drag';
+import { useState } from 'react';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import { temporaryRecipes } from './services/foodsQuery';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [recipeList, setRecipeList] = useState(temporaryRecipes);
+  const [draggedRecipes, setDraggedRecipes] = useState<any[]>([]);
+
+  const moveRecipe = (fromIndex: number, toIndex: number) => {
+    const updatedRecipes = [...recipeList];
+    const [movedRecipe] = updatedRecipes.splice(fromIndex, 1);
+    updatedRecipes.splice(toIndex, 0, movedRecipe);
+    setRecipeList(updatedRecipes);
+  };
+
+  const handleDrop = (recipe: any) => {
+    setDraggedRecipes((prev) => [...prev, recipe]);
+    setRecipeList((prev) => prev.filter((r) => r.id !== recipe.id));
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <DndProvider backend={HTML5Backend}>
+      <div className="flex">
+        {/* Pass handleDrop to Home component */}
+        <Home recipeList={recipeList} moveRecipe={moveRecipe} onDrop={handleDrop} />
+        <Drag draggedRecipes={draggedRecipes} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </>
-  )
+    </DndProvider>
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,87 @@
+{
+  "recipes": [
+    {
+      "id": "001",
+      "name": "Adobo",
+      "image": "https://example.com/adobo.jpg",
+      "ingredients": [
+        "1 pound pork or chicken, cut into pieces",
+        "1/2 cup soy sauce",
+        "1/4 cup vinegar",
+        "1 bay leaf",
+        "1 tablespoon whole peppercorns",
+        "1 tablespoon garlic, minced",
+        "1 tablespoon black pepper, ground",
+        "1 teaspoon sugar",
+        "1/2 cup water"
+      ],
+      "instructions": [
+        {
+          "step": 1,
+          "action": "In a large pot, combine soy sauce, vinegar, bay leaf, peppercorns, garlic, ground black pepper, sugar, and water.",
+          "time": "15 minutes"
+        },
+        {
+          "step": 2,
+          "action": "Add the pork or chicken pieces to the marinade.",
+          "time": ""
+        },
+        {
+          "step": 3,
+          "action": "Bring the mixture to a boil over high heat.",
+          "time": ""
+        },
+        {
+          "step": 4,
+          "action": "Reduce heat to low and simmer for 30-45 minutes, or until the meat is tender.",
+          "time": "30-45 minutes"
+        },
+        {
+          "step": 5,
+          "action": "Remove from heat and let cool slightly before serving.",
+          "time": ""
+        }
+      ]
+    },
+    {
+      "id": "002",
+      "name": "Menudo",
+      "image": "https://example.com/menudo.jpg",
+      "ingredients": [
+        "1 pound beef stew meat, cut into cubes",
+        "1 liver, sliced",
+        "1 heart, sliced",
+        "1 can (14.5 oz) diced tomatoes",
+        "1 onion, chopped",
+        "2 cloves garlic, minced",
+        "1 bay leaf",
+        "1 teaspoon black pepper, ground",
+        "1/2 teaspoon salt",
+        "1/4 cup vinegar",
+        "1 cup water"
+      ],
+      "instructions": [
+        {
+          "step": 1,
+          "action": "In a large pot, brown the beef stew meat over high heat.",
+          "time": "10-15 minutes"
+        },
+        {
+          "step": 2,
+          "action": "Add the liver, heart, diced tomatoes, onion, garlic, bay leaf, black pepper, salt, vinegar, and water.",
+          "time": ""
+        },
+        {
+          "step": 3,
+          "action": "Bring to a boil over high heat, then reduce heat to low and simmer for 1-2 hours, or until the meat is tender.",
+          "time": "1-2 hours"
+        },
+        {
+          "step": 4,
+          "action": "Remove from heat and let cool slightly before serving.",
+          "time": ""
+        }
+      ]
+    }
+  ]
+}

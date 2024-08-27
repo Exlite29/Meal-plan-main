@@ -1,0 +1,225 @@
+import { UseQueryOptions, useQuery } from "@tanstack/react-query";
+
+export const temporaryBookings = [
+  {
+    id: "001",
+    name: "Alice Smith",
+    email: "alice.smith@gmail.com",
+    service_type: "Advance Cleaning",
+    price: "€2,000",
+    date_time: "02/18/2024",
+    address: "123 Main Street",
+    items: ["Cleaning 1", "Cleaning 1", "Cleaning 1"],
+    rooms: "2 Rooms",
+    status: "new",
+  },
+  {
+    id: "002",
+    name: "Bob Johnson",
+    email: "bob.johnson@gmail.com",
+    service_type: "Essential Cleaning",
+    price: "€1,500",
+    date_time: "02/18/2024",
+    address: "456 Oak Avenue",
+    items: "Cleaning 1",
+    rooms: "2 Rooms",
+    status: "new",
+  },
+  {
+    id: "003",
+    name: "Eva Martinez",
+    email: "eva.martinez@gmail.com",
+    service_type: "Essential Cleaning",
+    price: "€1,500",
+    date_time: "02/18/2024",
+    address: "789 Elm Street",
+    items: ["Cleaning 1", "Cleaning 2", "Cleaning 3"],
+    rooms: "2 Rooms",
+    status: "new",
+  },
+  {
+    id: "004",
+    name: "David Brown",
+    email: "david.brown@gmail.com",
+    service_type: "Advance Cleaning",
+    price: "€2,000",
+    date_time: "02/18/2024",
+    address: "1011 Pine Road",
+    items: "Cleaning 1",
+    rooms: "2 Rooms",
+    status: "approve",
+  },
+  {
+    id: "005",
+    name: "Sophie Wilson",
+    email: "sophie.wilson@gmail.com",
+    service_type: "Essential Cleaning",
+    price: "€1,500",
+    date_time: "02/18/2024",
+    address: "1213 Maple Avenue",
+    items: "Cleaning 1",
+    rooms: "2 Rooms",
+    status: "approve",
+  },
+  {
+    id: "006",
+    name: "Michael Garcia",
+    email: "michael.garcia@gmail.com",
+    service_type: "Advance Cleaning",
+    price: "€2,000",
+    date_time: "02/18/2024",
+    address: "1415 Cedar Lane",
+    items: "Cleaning 1",
+    rooms: "2 Rooms",
+    status: "approve",
+  },
+  {
+    id: "007",
+    name: "John Doe",
+    email: "john.doe@gmail.com",
+    service_type: "Essential Cleaning",
+    price: "€1,500",
+    date_time: "02/18/2024",
+    address: "1617 Birch Street",
+    items: "Cleaning 1",
+    rooms: "2 Rooms",
+    status: "new",
+  },
+  {
+    id: "008",
+    name: "Emma White",
+    email: "emma.white@gmail.com",
+    service_type: "Essential Cleaning",
+    price: "€1,500",
+    date_time: "02/18/2024",
+    address: "1819 Pine Lane",
+    items: "Cleaning 1",
+    rooms: "2 Rooms",
+    status: "new",
+  },
+  {
+    id: "009",
+    name: "Oliver Taylor",
+    email: "oliver.taylor@gmail.com",
+    service_type: "Essential Cleaning",
+    price: "€1,500",
+    date_time: "02/18/2024",
+    address: "2021 Oak Street",
+    items: "Cleaning 1",
+    rooms: "2 Rooms",
+    status: "new",
+  },
+  {
+    id: "011",
+    name: "Liam Martinez",
+    email: "liam.martinez@gmail.com",
+    service_type: "Advance Cleaning",
+    price: "€2,000",
+    date_time: "02/18/2024",
+    address: "2425 Elm Street",
+    items: "Cleaning 1",
+    rooms: "2 Rooms",
+    status: "approve",
+  },
+  {
+    id: "012",
+    name: "Charlotte Wilson",
+    email: "charlotte.wilson@gmail.com",
+    service_type: "Advance Cleaning",
+    price: "€2,000",
+    date_time: "02/18/2024",
+    address: "2627 Cedar Lane",
+    items: "Cleaning 1",
+    rooms: "2 Rooms",
+    status: "approve",
+  },
+  {
+    id: "013",
+    name: "Jack Smith",
+    email: "jack.smith@gmail.com",
+    service_type: "Advance Cleaning",
+    price: "€2,000",
+    date_time: "02/18/2024",
+    address: "2829 Oak Lane",
+    items: "Cleaning 1",
+    rooms: "2 Rooms",
+    status: "completed",
+  },
+  {
+    id: "014",
+    name: "Emily Johnson",
+    email: "emily.johnson@gmail.com",
+    service_type: "Advance Cleaning",
+    price: "€2,000",
+    date_time: "02/18/2024",
+    address: "3031 Maple Street",
+    items: "Cleaning 1",
+    rooms: "2 Rooms",
+    status: "completed",
+  },
+  {
+    id: "015",
+    name: "Noah Garcia",
+    email: "noah.garcia@gmail.com",
+    service_type: "Advance Cleaning",
+    price: "€2,000",
+    date_time: "02/18/2024",
+    address: "3233 Elm Avenue",
+    items: "Cleaning 1",
+    rooms: "2 Rooms",
+    status: "completed",
+  },
+  {
+    id: "016",
+    name: "Ava Martinez",
+    email: "ava.martinez@gmail.com",
+    service_type: "Advance Cleaning",
+    price: "€2,000",
+    date_time: "02/18/2024",
+    address: "3435 Cedar Street",
+    items: "Cleaning 1",
+    rooms: "2 Rooms",
+    status: "canceled",
+  },
+  {
+    id: "017",
+    name: "William Brown",
+    email: "william.brown@gmail.com",
+    service_type: "Advance Cleaning",
+    price: "€2,000",
+    date_time: "02/18/2024",
+    address: "3637 Pine Lane",
+    items: "Cleaning 1",
+    rooms: "2 Rooms",
+    status: "canceled",
+  },
+];
+
+export type Bookings = typeof temporaryBookings;
+
+const getAllBookings = (): Bookings => {
+  return temporaryBookings;
+};
+
+export const getBookingsQuery = (bookingsId: string): UseQueryOptions => {
+  return {
+    enabled: !isNaN(+bookingsId),
+    queryKey: ["bookings", bookingsId],
+    queryFn: async () => {
+      return temporaryBookings.find((bookings) => bookings.id === bookingsId);
+    },
+  };
+};
+
+export const useGetAllBookings = () => {
+  return useQuery({
+    queryKey: ["bookings"],
+    queryFn: getAllBookings,
+  });
+};
+
+export const useGetBooking = (bookingsId: string) => {
+  return useQuery(getBookingsQuery(bookingsId));
+};
+
+// -- add bookings
