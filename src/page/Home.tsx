@@ -104,7 +104,7 @@ const Home: FC<{ recipeList: any[], moveRecipe: any, onDrop: any }> = ({ recipeL
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <div className="grid grid-cols-3 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-4">
                 {filteredRecipes.map((recipe, index) => (
                     <RecipeCard key={recipe.id} index={index} recipe={recipe} moveRecipe={moveRecipe} onDrop={onDrop} />
                 ))}
