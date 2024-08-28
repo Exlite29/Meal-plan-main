@@ -1,10 +1,11 @@
 import './App.css';
 import Home from './page/Home';
-import Drag from './page/Drag';
+import Drop from './page/Drop';
 import { useState } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { temporaryRecipes } from './services/foodsQuery';
+import Weeks from './page/Weeks';
 
 function App() {
   const [recipeList, setRecipeList] = useState(temporaryRecipes);
@@ -25,9 +26,9 @@ function App() {
   return (
     <DndProvider backend={HTML5Backend}>
       <div className="flex">
-        {/* Pass handleDrop to Home component */}
         <Home recipeList={recipeList} moveRecipe={moveRecipe} onDrop={handleDrop} />
-        <Drag draggedRecipes={draggedRecipes} />
+        <Weeks />
+        <Drop draggedRecipes={draggedRecipes} />
       </div>
     </DndProvider>
   );

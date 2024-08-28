@@ -81,7 +81,7 @@ const RecipeCard: FC<{ recipe: any, index: number, moveRecipe: any, onDrop: any 
                 alt={recipe.name}
                 className="h-16 w-full object-cover rounded mb-2"
             />
-            <h2 className="text-center text-lg font-semibold">{recipe.name}</h2>
+            <h2 className="text-center text-sm font-semibold">{recipe.name}</h2>
         </div>
     );
 };
@@ -96,7 +96,7 @@ const Home: FC<{ recipeList: any[], moveRecipe: any, onDrop: any }> = ({ recipeL
 
     return (
         <div className="flex flex-col items-center gap-4 h-screen p-4">
-            <h1 className="text-2xl mb-4">Recipes</h1>
+            <h1 className="text-sm font-bold mb-4">Recipes</h1>
             <input
                 type="text"
                 placeholder="Search recipes..."

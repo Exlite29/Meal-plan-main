@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
-const Drag: FC<{ draggedRecipes: any[] }> = ({ draggedRecipes }) => {
+const Drop: FC<{ draggedRecipes: any[] }> = ({ draggedRecipes }) => {
     return (
         <div className="p-4 border-l border-gray-200 w-1/3">
-            <h2 className="text-xl font-semibold mb-4">Dragged Recipes</h2>
+            <h2 className="text-sm font-bold mt-1 mb-4">Dragged Recipes</h2>
             {draggedRecipes.map((recipe) => (
                 <div key={recipe.id} className="mb-4">
                     <img
@@ -30,4 +30,4 @@ const Drag: FC<{ draggedRecipes: any[] }> = ({ draggedRecipes }) => {
     );
 };
 
-export default Drag;
+export default Drop;
