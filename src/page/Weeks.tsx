@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDrop } from 'react-dnd';
+import RecipeModal from './RecipeModal';
 
 const WEEKS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 const MEALTIMES = ['Morning', 'Lunch', 'Dinner'];
 
 const Weeks: React.FC<{ draggedRecipes: any, onDrop: any }> = ({ draggedRecipes, onDrop }) => {
+    const [selectedRecipe, setSelectedRecipe] = useState<any>(null);
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+    const openModal = (recipe: any) => {
+        setSelectedRecipe(recipe);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setSelectedRecipe(null);
+    };
     console.log('Dragged Recipes:', draggedRecipes);
     return (
         <div className='grid grid-cols-3 w-full gap-4 mt-5 m-5'>
@@ -14,20 +27,24 @@ const Weeks: React.FC<{ draggedRecipes: any, onDrop: any }> = ({ draggedRecipes,
                     {MEALTIMES.map((mealtime, i) => (
                         <MealTimeDropArea
 
-                            key={`${day}-${mealtime} ${i}`}  // Make the key unique by combining day and mealtime
+                            key={`${day}-${mealtime} ${i}`}
                             day={day}
                             mealtime={mealtime}
                             recipes={draggedRecipes?.[day]?.[mealtime] || []}
                             onDrop={onDrop}
+                            openModal={openModal}
                         />
                     ))}
+                    {isModalOpen && selectedRecipe && (
+                        <RecipeModal recipe={selectedRecipe} onClose={closeModal} />
+                    )}
                 </ul>
             ))}
         </div>
     );
 };
 
-const MealTimeDropArea: React.FC<{ day: string, mealtime: string, recipes: any[], onDrop: any }> = ({ day, mealtime, recipes = [], onDrop }) => {
+const MealTimeDropArea: React.FC<{ day: string, mealtime: string, recipes: any[], onDrop: any, openModal: (recipe: any) => void }> = ({ day, mealtime, recipes = [], onDrop, openModal }) => {
     console.log(recipes);
 
     const [, drop] = useDrop({
@@ -43,7 +60,10 @@ const MealTimeDropArea: React.FC<{ day: string, mealtime: string, recipes: any[]
         <div ref={drop} className={className}>
             <p className='ml-2 font-semibold text-black mb-2'>{mealtime}</p>
             {recipes.map((recipe, i) => (
-                <div key={i} className='bg-white font-semibold text-black m-2 p-2 rounded shadow'>
+                <div
+                    key={i}
+                    onClick={() => openModal(recipe)}
+                    className='bg-white font-semibold text-black m-2 p-2 rounded shadow'>
                     <p className='text-black text-sm'>{recipe.name}</p>
                 </div>
             ))}
