@@ -1,13 +1,12 @@
 import React from 'react';
 
 const RecipeModal: React.FC<{ recipe: any, onClose: () => void }> = ({ recipe, onClose }) => {
-    // Helper function to convert YouTube URL to embed URL
     const getYouTubeEmbedUrl = (url: string) => {
         const videoIdMatch = url.match(/(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
         if (videoIdMatch) {
             return `https://www.youtube.com/embed/${videoIdMatch[1]}`;
         }
-        return url; // return as is if not a YouTube URL
+        return url;
     };
 
     const isYouTube = recipe.video.includes('youtube.com') || recipe.video.includes('youtu.be');
@@ -51,7 +50,7 @@ const RecipeModal: React.FC<{ recipe: any, onClose: () => void }> = ({ recipe, o
                     {recipe.instructions.map((instruction: { action: string, time: string }, index: number) => (
                         <li className='text-sm' key={index}>
                             {instruction.action}
-                            {instruction.time === '' ? '' : <span className='font-semibold ml-2'>({instruction.time})</span>}
+                            {instruction.time === '' ? '' : <span className='font-semibold ml-2'>{instruction.time}</span>}
                         </li>
                     ))}
                 </ul>

@@ -55,10 +55,11 @@ const MealTimeDropArea: React.FC<{ day: string, mealtime: string, recipes: any[]
     const baseClass = 'h-auto border mt-2 border-gray-300 rounded-md text-black';
     const filledClass = recipes.length > 0 ? 'bg-[#0b6477]' : 'bg-gray-100';
     const className = `${baseClass} ${filledClass}`;
+    const textClass = recipes.length > 0 ? 'text-white' : 'text-black';
 
     return (
         <div ref={drop} className={className}>
-            <p className='ml-2 mt-2 font-semibold text-white mb-2'>{mealtime}</p>
+            <p className={`ml-2 mt-2 font-semibold  mb-2 text-black ${textClass} `}>{mealtime}</p>
             {recipes.map((recipe, i) => (
                 <div
                     key={i}
