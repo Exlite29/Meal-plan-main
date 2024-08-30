@@ -5,7 +5,8 @@ export const temporaryRecipes = [
     id: "001",
     name: "Adobo",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Adobo_DSCF4391.jpg/440px-Adobo_DSCF4391.jpg", // Replace with the actual image URL
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Adobo_DSCF4391.jpg/440px-Adobo_DSCF4391.jpg",
+    video: "https://www.youtube.com/watch?v=P-udxyWPsm0",
     ingredients: [
       "1 pound pork or chicken, cut into pieces",
       "1/2 cup soy sauce",
@@ -50,7 +51,8 @@ export const temporaryRecipes = [
   {
     id: "002",
     name: "Menudo",
-    image: "https://assets.unileversolutions.com/recipes-v3/214409-default.png", // Replace with the actual image URL
+    image: "https://assets.unileversolutions.com/recipes-v3/214409-default.png",
+    video: "https://www.youtube.com/watch?v=EblSm5g27Gk",
     ingredients: [
       "1 pound beef stew meat, cut into cubes",
       "1 liver, sliced",

@@ -23,7 +23,7 @@ const Weeks: React.FC<{ draggedRecipes: any, onDrop: any }> = ({ draggedRecipes,
         <div className='grid grid-cols-3 w-full gap-4 mt-5 m-5'>
             {WEEKS.map((day) => (
                 <ul key={day} className='h-auto'>
-                    <li className='font-bold text-sm text-white pl-2 pt-2 pb-1 bg-[#213a57] rounded-lg'>{day}</li>
+                    <li className='font-bold text-sm text-white pl-2 pt-2 pb-1 bg-[#213a57] rounded-t-lg'>{day}</li>
                     {MEALTIMES.map((mealtime, i) => (
                         <MealTimeDropArea
 
@@ -58,7 +58,7 @@ const MealTimeDropArea: React.FC<{ day: string, mealtime: string, recipes: any[]
 
     return (
         <div ref={drop} className={className}>
-            <p className='ml-2 font-semibold text-black mb-2'>{mealtime}</p>
+            <p className='ml-2 mt-2 font-semibold text-black mb-2'>{mealtime}</p>
             {recipes.map((recipe, i) => (
                 <div
                     key={i}
