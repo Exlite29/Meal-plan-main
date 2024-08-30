@@ -95,6 +95,7 @@ export const temporaryRecipes = [
     id: "003",
     name: "Sinigang na Baboy",
     image: "https://assets.unileversolutions.com/recipes-v3/214408-default.png",
+    video: "https://www.youtube.com/watch?v=Vuk3wly8mxQ",
     ingredients: [
       "1 pound pork ribs or belly",
       "1 packet tamarind soup base",
@@ -142,6 +143,7 @@ export const temporaryRecipes = [
     name: "Lechon Kawali",
     image:
       "https://panlasangpinoy.com/wp-content/uploads/2019/03/Lechon-Kawali-Recipe.jpg",
+    video: "https://www.youtube.com/watch?v=MPY9EmLFaR0",
     ingredients: [
       "1 pound pork belly",
       "2 tablespoons salt",
@@ -178,6 +180,7 @@ export const temporaryRecipes = [
     id: "005",
     name: "Kare-Kare",
     image: "https://assets.unileversolutions.com/v1/85775930.jpg",
+    video: "https://www.youtube.com/watch?v=YvTs4on5aVM",
     ingredients: [
       "1 pound oxtail",
       "1/2 cup peanut butter",
@@ -222,6 +225,7 @@ export const temporaryRecipes = [
     id: "006",
     name: "Pancit Canton",
     image: "https://assets.unileversolutions.com/recipes-v3/214416-default.png",
+    video: "https://www.youtube.com/watch?v=6-b6h_LoJyg",
     ingredients: [
       "8 ounces pancit canton noodles",
       "1/2 pound pork, sliced",
@@ -272,6 +276,7 @@ export const temporaryRecipes = [
     name: "Bicol Express",
     image:
       "https://yummykitchentv.com/wp-content/uploads/2023/02/creamy-bicol-express.jpg",
+    video: "https://www.youtube.com/watch?v=EglwOEDdsHU",
     ingredients: [
       "1 pound pork belly, sliced",
       "1 cup coconut milk",
@@ -320,6 +325,7 @@ export const temporaryRecipes = [
     name: "Pinakbet",
     image:
       "https://api.lifegetsbetter.ph/uploads/recipes/featured/pinakbet-featured-img.jpg",
+    video: "https://www.youtube.com/watch?v=Y3V2DmMWBok",
     ingredients: [
       "1/2 pound pork, sliced",
       "1/4 cup shrimp paste",
@@ -364,6 +370,7 @@ export const temporaryRecipes = [
     name: "Pork Binagoongan",
     image:
       "https://yummykitchentv.com/wp-content/uploads/2022/01/pork-binagoongan-with-gata-recipe.jpg",
+    video: "https://www.youtube.com/watch?v=ac2i9aS31Iw",
     ingredients: [
       "1 pound pork belly, diced",
       "1/4 cup shrimp paste",
@@ -405,6 +412,7 @@ export const temporaryRecipes = [
     id: "010",
     name: "Laing",
     image: "https://assets.unileversolutions.com/recipes-v2/110738.jpg",
+    video: "https://www.youtube.com/watch?v=piqJdlrWxU0",
     ingredients: [
       "1 cup dried taro leaves",
       "1/2 pound pork, sliced",
@@ -455,6 +463,7 @@ export const temporaryRecipes = [
     name: "Chicken Adobo",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa_uRdxyfGwrkrr-FwEDsprzHvfF114G7u2w&s",
+    video: "https://www.youtube.com/watch?v=wwapBsT0oc8",
     ingredients: [
       "1 pound chicken pieces",
       "1/4 cup soy sauce",
@@ -498,6 +507,7 @@ export const temporaryRecipes = [
     name: "Sweet and Sour Pork",
     image:
       "https://www.foxyfolksy.com/wp-content/uploads/2022/11/sweet-and-sour-pork-1200t.jpg",
+    video: "https://www.youtube.com/watch?v=mdaBIhgEAMo",
     ingredients: [
       "1 pound pork, sliced into cubes",
       "1/2 cup cornstarch",
@@ -546,6 +556,7 @@ export const temporaryRecipes = [
     name: "Chicken Inasal",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMNOk6165q8gs76MSVczhymG3mFw1bbz_o9A&s",
+    video: "https://www.youtube.com/watch?v=7Gei0KO60yU",
     ingredients: [
       "1 pound chicken, cut into pieces",
       "1/4 cup soy sauce",
@@ -579,6 +590,7 @@ export const temporaryRecipes = [
     name: "Bopis",
     image:
       "https://panlasangpinoy.com/wp-content/uploads/2010/11/bopis-recipe-jpg.webp",
+    video: "https://www.youtube.com/watch?v=8N15famBhsM",
     ingredients: [
       "1/2 pound pork lungs, cleaned and diced",
       "1/2 pound pork heart, cleaned and diced",
@@ -625,6 +637,7 @@ export const temporaryRecipes = [
     name: "Sopas",
     image:
       "https://www.kawalingpinoy.com/wp-content/uploads/2018/12/creamy-chicken-sopas-5.jpg",
+    video: "https://www.youtube.com/watch?v=zjs4lmzi2OY",
     ingredients: [
       "1/2 pound chicken, diced",
       "1 onion, chopped",
@@ -675,6 +688,7 @@ export const temporaryRecipes = [
     name: "Ginataang Bilo-Bilo",
     image:
       "https://panlasangpinoy.com/wp-content/uploads/2014/08/ginataang-bilo-bilo-500x485.jpg",
+    video: "https://www.youtube.com/watch?v=ebQMLF89MFg",
     ingredients: [
       "1 cup glutinous rice balls (bilo-bilo)",
       "1 cup sweet potato, peeled and diced",
@@ -719,6 +733,7 @@ export const temporaryRecipes = [
     name: "Bistek Tagalog",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDAM-WkKz8IXcKgT_ADsOPV_Eqeg9CvVxWMg&s",
+    video: "https://www.youtube.com/watch?v=xH746HwUlbQ",
     ingredients: [
       "1/2 pound pancit canton noodles",
       "1/2 pound pork, sliced",
@@ -767,6 +782,7 @@ export const temporaryRecipes = [
     name: "Tapsilog",
     image:
       "https://purposefoods.ph/cdn/shop/products/tapsilog2.jpg?v=1669191513",
+    video: "https://www.youtube.com/watch?v=UWgJuCL_NU4",
     ingredients: [
       "1/2 pound beef sirloin, sliced thinly",
       "1/4 cup soy sauce",
@@ -802,6 +818,7 @@ export const temporaryRecipes = [
     name: "Lumpiang Shanghai",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2UiXpAW_2iSStHgEHkblIt9FHwMtM-n2wIg&s",
+    video: "https://www.youtube.com/watch?v=lKghfAezY08",
     ingredients: [
       "1/2 pound ground pork",
       "1/2 cup carrots, grated",
@@ -841,6 +858,7 @@ export const temporaryRecipes = [
     id: "020",
     name: "Pancit Malabon",
     image: "https://assets.unileversolutions.com/recipes-v2/237857.jpg",
+    video: "https://www.youtube.com/watch?v=ZLJWT1nz4ik",
     ingredients: [
       "1/2 pound rice noodles",
       "1/2 pound shrimp, peeled and deveined",

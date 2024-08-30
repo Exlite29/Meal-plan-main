@@ -41,7 +41,7 @@ const Home: FC<{ recipeList: any[], moveRecipe: any }> = ({ recipeList, moveReci
             <h1 className="text-sm font-bold mb-4">Recipes</h1>
             <input
                 type="text"
-                placeholder="Search recipes..."
+                placeholder="Search food..."
                 className="p-2 border border-gray-300 rounded"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}

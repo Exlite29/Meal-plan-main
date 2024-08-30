@@ -58,7 +58,7 @@ const MealTimeDropArea: React.FC<{ day: string, mealtime: string, recipes: any[]
 
     return (
         <div ref={drop} className={className}>
-            <p className='ml-2 mt-2 font-semibold text-black mb-2'>{mealtime}</p>
+            <p className='ml-2 mt-2 font-semibold text-white mb-2'>{mealtime}</p>
             {recipes.map((recipe, i) => (
                 <div
                     key={i}
